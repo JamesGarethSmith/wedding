@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title><%= content_for?(:title) ? yield(:title) : "foundation-rails" %></title>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true %>
+    <%= javascript_include_tag "vendor/modernizr" %>
+    <%= javascript_include_tag "application", 'data-turbolinks-track' => true %>
+    <%= csrf_meta_tags %>
+  </head>
+
+  <body>
+    <div class="row">
+      <div class="medium-3 large-2 columns">
+        <div class="icon-bar six-up medium-vertical">
+          <a href="/" class="item">
+            <i class="fi-star"></i>
+            <label class="hide-for-small">Details</label>
+          </a>
+          <a href="/rsvp" class="item">
+            <i class="fi-mail"></i>
+            <label class="hide-for-small">RSVP</label>
+          </a>
+          <a href="/directions" class="item">
+            <i class="fi-map"></i>
+            <label class="hide-for-small">Directions</label>
+          </a>
+          <a href="/transport" class="item">
+            <i class="fi-foot"></i>
+            <label class="hide-for-small">Transport</label>
+          </a>
+          <a href="/accommodation" class="item">
+            <i class="fi-home"></i>
+            <label class="hide-for-small">Accommodation</label>
+          </a>
+          <a href="/gifts" class="item">
+            <i class="fi-shopping-bag"></i>
+            <label class="hide-for-small">Gifts</label>
+          </a>
+        </div>
+      </div>
+      <div class="medium-9 large-10 columns">
+        <div class="content-container">
+          <%= yield %>
+        <div>
+      </div>
+    </div>
+
+  </body>
+</html>
