@@ -1,0 +1,12 @@
+<h1>Editing a location</h1>
+
+<%= form_for @location, url: "/locations/#{@location.id}", method: :put do |f| %>
+  <%= render "shared/form_errors", resource: @location %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.submit class: "button" %>
+<% end %>

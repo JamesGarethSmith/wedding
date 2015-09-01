@@ -1,0 +1,24 @@
+<h1>Editing accommodation</h1>
+
+<%= form_for @accommodation, url: "/accommodations/#{@accommodation.id}", method: :put do |f| %>
+  <%= render "shared/form_errors", resource: @accommodation %>
+  <%= f.label :title %>
+  <%= f.text_field :title %>
+
+  <%= f.label :url %>
+  <%= f.text_field :url %>
+
+  <%= f.label :price_range %>
+  <%= f.text_field :price_range %>
+
+  <%= f.label :description %>
+  <%= f.text_field :description %>
+
+  <%= f.label :accommodates %>
+  <%= f.text_field :accommodates %>
+
+  <%= f.label :location %>
+  <%= f.select :location_id, Location.all.collect {|c| [c.title, c.id]} %>
+
+  <%= f.submit class: "button" %>
+<% end %>

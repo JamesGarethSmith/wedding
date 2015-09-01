@@ -3,3 +3,11 @@
     margin-left: 40px;
   }
 }
+
+html {
+  overflow: scroll;
+}
+
+.item.active {
+  background: #008CBA;
+}

@@ -1,1 +1,9 @@
 <h1>Accommodation</h1>
+<p>To help you find your ideal accommodation, we've listed over <%= @accommodation_count %> options in and around the wedding venue. The options range from camping at the venue to guesthouses, B&amp;B’s and even 5-star luxury.</p>
+<p>Options are grouped by proximity to the venue. Click on the links below for more info on each accommodation.</p>
+
+<% @locations.each do |location| %>
+  <h2><%= location %></h2>
+  <em><%= location.description %></em>
+  <hr>
+<% end %>

@@ -1,0 +1,7 @@
+<h1>Accommodations</h1>
+<p><%= link_to "Add a new accommodation", new_accommodation_path, class: "button" %></p>
+<ul>
+  <% @accommodations.each do |accommodation| %>
+    <li><%= link_to accommodation, edit_accommodation_path(accommodation) %> | <%= link_to "delete", "/accommodations/#{accommodation.id}", method: :delete, data: {confirm: "Are you sure?"}%></li>
+  <% end %>
+</ul>

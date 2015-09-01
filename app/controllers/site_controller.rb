@@ -6,6 +6,8 @@ class SiteController < ApplicationController
   end
 
   def accommodation
+    @locations = Location.all.includes(:accommodations)
+    @accommodation_count = Accommodation.count
   end
 
   def gifts

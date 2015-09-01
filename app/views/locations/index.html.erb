@@ -1,0 +1,7 @@
+<h1>Locations</h1>
+<p><%= link_to "Add a new location", new_location_path, class: "button" %></p>
+<ul>
+  <% @locations.each do |location| %>
+    <li><%= link_to location, edit_location_path(location) %> | <%= link_to "delete", "/locations/#{location.id}", method: :delete, data: {confirm: "Are you sure?"}%></li>
+  <% end %>
+</ul>

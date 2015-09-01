@@ -1,0 +1,9 @@
+<% if resource.errors.any? %>
+  <div class="alert-box alert">
+    <a href="" class="close">&times;</a>
+    <ul>
+      <% resource.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+  </div>
+<% end %>
