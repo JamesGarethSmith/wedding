@@ -1,0 +1,52 @@
+<h1>Are you joining us?</h1>
+
+<%= form_for @rsvp do |f| %>
+  <%= render "shared/form_errors", resource: @rsvp %>
+
+  <div class="row">
+    <div class="medium-6 columns end">
+      <%= f.label :name %>
+      <%= f.text_field :name, required: true %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="medium-6 columns end">
+      <%= f.label :email %>
+      <%= f.email_field :email, required: true %>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="medium-2 columns end">
+      <%= f.label :attending %>
+      <select id="rsvp_total_attending" name="rsvp[total_attending]">
+        <option selected value="">Yes</option>
+        <option value="">No</option>
+      </select>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="medium-2 columns end">
+      <%= f.label :total_attending %>
+      <select id="rsvp_total_attending" name="rsvp[total_attending]">
+        <% 7.times do |i| %>
+          <% if i == 2 %>
+            <option selected value="<%= i %>"><%= i %></option>
+          <% else %>
+            <option value="<%= i %>"><%= i %></option>
+          <% end %>
+        <% end %>
+      </select>
+    </div>
+  </div>
+
+  <%= f.label :names_of_additional_guests %>
+  <%= f.text_field :names_of_additional_guests %>
+
+  <%= f.label :dietary_requirements %>
+  <%= f.text_area :dietary_requirements %>
+
+  <%= f.submit "RSVP", class: "button" %>
+<% end %>

@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  email: MyString
+  dietary_requirements: MyText
+  total_attending: 1
+  names_of_additional_guests: MyText
+
+two:
+  name: MyString
+  email: MyString
+  dietary_requirements: MyText
+  total_attending: 1
+  names_of_additional_guests: MyText
