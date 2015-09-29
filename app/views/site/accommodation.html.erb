@@ -10,9 +10,11 @@
     <% location.accommodations.each do |accommodation| %>
       <li>
         <h3><a href="<%= accommodation.url %>"><%= accommodation.title %></a></h3>
-        <p><%= accommodation.description %>
-        <br><%= accommodation.accommodates %>
-        <br><strong><%= accommodation.price_range %></strong></p>
+        <ul>
+          <li><%= accommodation.description %></li>
+          <li><%= accommodation.accommodates %></li>
+          <li><strong><%= accommodation.price_range %></strong></li>
+        </ul>
       </li>
     <% end %>
   </ul>
