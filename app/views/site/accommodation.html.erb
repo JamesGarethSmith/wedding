@@ -6,15 +6,15 @@
   <h2><%= location %></h2>
   <em><%= location.description %></em>
   <br><br>
-  <ul class="large-block-grid-2">
-    <li class="card">
-      <% location.accommodations.each do |accommodation| %>
+  <ul class="small-block-grid-2">
+    <% location.accommodations.each do |accommodation| %>
+      <li>
         <h3><a href="<%= accommodation.url %>"><%= accommodation.title %></a></h3>
         <p><%= accommodation.description %></p>
         <p><%= accommodation.accommodates %></p>
         <p><strong><%= accommodation.price_range %></strong></p>
-      <% end %>
-    </li>
+      </li>
+    <% end %>
   </ul>
   <hr>
 <% end %>
