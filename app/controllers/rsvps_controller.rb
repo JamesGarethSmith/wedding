@@ -1,5 +1,5 @@
 class RsvpsController < AdminController
-  before_action :authenticate_user!, except: [:create]
+  before_action :authenticate_user!, only: [:index]
   layout "application", only: [:new, :create]
 
   def new
