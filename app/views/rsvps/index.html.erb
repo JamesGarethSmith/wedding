@@ -2,6 +2,6 @@
 
 <ul>
   <% @rsvps.each do |rsvp| %>
-    <li><%= link_to rsvp %></li>
+    <li><%= link_to rsvp, rsvp_path(rsvp) %></li>
   <% end %>
 </ul>

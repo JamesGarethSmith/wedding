@@ -5,11 +5,16 @@
 <% @locations.each do |location| %>
   <h2><%= location %></h2>
   <em><%= location.description %></em>
-  <% location.accommodations.each do |accommodation| %>
-    <h3><a href="<%= accommodation.url %>"><%= accommodation.title %></a></h3>
-    <p><%= accommodation.description %></p>
-    <p><%= accommodation.accommodates %></p>
-    <p><strong><%= accommodation.price_range %></strong></p>
-  <% end %>
+  <br><br>
+  <ul class="large-block-grid-2">
+    <li class="card">
+      <% location.accommodations.each do |accommodation| %>
+        <h3><a href="<%= accommodation.url %>"><%= accommodation.title %></a></h3>
+        <p><%= accommodation.description %></p>
+        <p><%= accommodation.accommodates %></p>
+        <p><strong><%= accommodation.price_range %></strong></p>
+      <% end %>
+    </li>
+  </ul>
   <hr>
 <% end %>
