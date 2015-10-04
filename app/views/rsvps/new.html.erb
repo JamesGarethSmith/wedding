@@ -1,7 +1,11 @@
-<h1>Are you joining us?</h1>
-<% if notice %>
-  <div data-alert class="alert-box"><%= notice %><a href="#" class="close">&times;</a></div>
-<% end %>
+<div class="row">
+  <div class="medium-12 columns">
+    <h1>Are you joining us?</h1>
+    <% if notice %>
+      <div data-alert class="alert-box"><%= notice %><a href="#" class="close">&times;</a></div>
+    <% end %>
+  </div>
+</div>
 <%= form_for @rsvp do |f| %>
   <%= render "shared/form_errors", resource: @rsvp %>
 
@@ -44,11 +48,15 @@
     </div>
   </div>
 
-  <%= f.label :names_of_additional_guests %>
-  <%= f.text_field :names_of_additional_guests %>
+  <div class="row">
+    <div class="medium-12 columns">
+      <%= f.label :names_of_additional_guests %>
+      <%= f.text_field :names_of_additional_guests %>
 
-  <%= f.label :dietary_requirements %>
-  <%= f.text_area :dietary_requirements %>
+      <%= f.label :dietary_requirements %>
+      <%= f.text_area :dietary_requirements %>
 
-  <%= f.submit "RSVP", class: "button" %>
+      <%= f.submit "RSVP", class: "button" %>
+    </div>
+  </div>
 <% end %>

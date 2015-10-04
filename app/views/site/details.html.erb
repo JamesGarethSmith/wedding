@@ -1,1 +1,44 @@
-<%= image_tag "us.jpg", class: "image" %>
+<div class="row">
+  <div class="medium-12 columns">
+    <h1>Celebrate with us</h1>
+    <p>At 15h30 on 13 February 2016 at <%= link_to "De Uijlenes Farm", directions_path %>, in the beautiful Uilkraal Valley near Gansbaai.</p>
+    <p>If you plan to stay for a night or two in this lovely part of the Overberg, we suggest that you book <%= link_to "accommodation", accommodation_path %> soon. Options may be snapped up quickly so close to Valentine's Day.</p>
+    <p><strong>Please <%= link_to "RSVP", new_rsvp_path %> by 15 November 2015.</strong></p>
+  </div>
+</div>
+
+<div class="row">
+  <div class="medium-6 columns">
+    <%= image_tag "us.jpg", class: "image" %>
+  </div>
+  <div class="medium-6 columns">
+    <%= image_tag "aandj.jpg", class: "image" %>
+  </div>
+</div>
+
+<div class="row">
+  <div class="medium-12 columns">
+    <br>
+    <table class="twelve">
+      <tbody>
+        <tr>
+          <th>Start time</th>
+          <td>15h30</td>
+        </tr>
+        <tr>
+          <th>Date</th>
+          <td>13 February 2016</td>
+        </tr>
+        <tr>
+          <th>Location</th>
+          <td><%= link_to "De Uijlenes Farm, Uilkraal Valley", directions_path %></td>
+        </tr>
+        <tr>
+          <th>Dress code</th>
+          <td>Semi-formal (bear in mind it's in a forest on a farm)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div
+

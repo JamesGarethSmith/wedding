@@ -1,11 +1,13 @@
-@media only screen and (min-width: 64.063em) {
-  .content-container {
-    padding: 0 20px;
-  }
+.content-container {
+  padding: 0 20px;
 }
 
 html {
   overflow: scroll;
+}
+
+table.twelve {
+  width: 100%;
 }
 
 .item.active {
