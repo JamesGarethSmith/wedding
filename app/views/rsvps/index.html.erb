@@ -1,7 +1,26 @@
 <h1>RSVPs</h1>
 
-<ul>
-  <% @rsvps.each do |rsvp| %>
-    <li><%= link_to rsvp, rsvp_path(rsvp) %></li>
-  <% end %>
-</ul>
+<table>
+  <thead>
+    <tr>
+      <th>Attending?</th>
+      <th>Name</th>
+      <th>Email</th>
+      <th>Dietary requirements</th>
+      <th>Total attending</th>
+      <th>Guest names</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @rsvps.each do |rsvp| %>
+      <tr>
+        <td><%= rsvp.attending? %></td>
+        <td><%= rsvp.name %></td>
+        <td><%= rsvp.email %></td>
+        <td><%= rsvp.dietary_requirements %></td>
+        <td><%= rsvp.total_attending %></td>
+        <td><%= rsvp.names_of_additional_guests %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
