@@ -26,10 +26,7 @@
   <div class="row">
     <div class="medium-2 columns end">
       <%= f.label :attending %>
-      <select id="rsvp_total_attending" name="rsvp[total_attending]">
-        <option selected value="">Yes</option>
-        <option value="">No</option>
-      </select>
+      <%= f.checkbox :attending, checked: true %>
     </div>
   </div>
 
